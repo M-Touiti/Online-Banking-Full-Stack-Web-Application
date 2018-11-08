@@ -1,10 +1,13 @@
 package com.userfront.Dao;
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 import com.userfront.domain.User;
 
-public interface UserDao extends CrudRepository<User, Long>{
+public interface UserDao extends CrudRepository<User, Long> {
 	User findByUsername(String username);
-	User findByEmail(String email);
+    User findByEmail(String email);
+    List<User> findAll();
 }
